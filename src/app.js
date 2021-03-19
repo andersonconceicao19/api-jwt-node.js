@@ -10,5 +10,4 @@ class AppControler {
         routes(this.express)
     }
 }
-
 module.exports = new AppControler().express;
