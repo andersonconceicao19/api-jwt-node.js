@@ -1,9 +1,6 @@
 const routes = require('express').Router()
-
-routes.get('/', (request, response) => {
-    return response.json({
-        message: 'anderson foi '
-    })
-})
+const userController = require('../app/controllers/UserController')
+routes.get('/', userController.get)
+routes.post('/', userController.create)
 
 module.exports = routes;
