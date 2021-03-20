@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken')
 class UserController {
     static async get(request, response, next) {
         const users = await _context.User.findAll()
-        if (!!users) return response.status(404).json({
+        console.log(!!users);
+        if (!users) return response.status(404).json({
             message: 'not found users'
         })
         return response.status(200).json({
